@@ -195,23 +195,16 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-DATABASE_NAME = "company"
-password = "admin"
-user = "postgres"
-host = "localhost"
-port = "5432"
-
-DATABASE_URL = f"postgresql+psycopg2://{user}:{password}@{host}:{port}/{DATABASE_NAME}"
+DATABASE_URL = os.getenv("DATABASE_URL")
 
 def get_db_connection():
     try:
         engine = create_engine(DATABASE_URL)
-        print(f"✅ Connected to {DATABASE_NAME} successfully!")
+        print(f"✅ Connected to database successfully!")
         return SQLDatabase(engine)
     except SQLAlchemyError as e:
         print(f"❌ Database connection error: {str(e)}")
         raise HTTPException(status_code=500, detail="Database connection failed.")
-
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY", "AIzaSyD9kmbO735ZRG-Vnk-iegTodps0ASbQq7A")
 llm_gemini = ChatGoogleGenerativeAI(
     model="gemini-2.0-flash",
