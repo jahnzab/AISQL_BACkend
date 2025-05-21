@@ -181,7 +181,7 @@ load_dotenv()
 
 app = FastAPI()
 
-app.mount("/images", StaticFiles(directory="/home/jahanzaib/Pictures/Screenshots"), name="images")
+#app.mount("/images", StaticFiles(directory="/home/jahanzaib/Pictures/Screenshots"), name="images")
 
 app.add_middleware(
     CORSMiddleware,
