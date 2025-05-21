@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+python-dotenv
+langchain
+langchain-community
+langchain-experimental
+langchain-core
+chromadb
+psycopg2-binary  # PostgreSQL driver
+sqlalchemy
+pydantic
+tiktoken
+langchain-google-genai  # ✅ Gemini (Google Generative AI)
+
