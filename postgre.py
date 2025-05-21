@@ -241,6 +241,9 @@ def get_table_columns(engine, table_name: str):
     inspector = inspect(engine)
     columns = inspector.get_columns(table_name)
     return [col["name"] for col in columns]
+@app.get("/")
+async def root():
+    return {"message": "Service is live. Use /tables or /ask endpoints."}
 
 @app.get("/tables/")
 async def get_tables():
