@@ -185,7 +185,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=["http://localhost:5173",https://aisql-query-pys8.vercel.app/],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
