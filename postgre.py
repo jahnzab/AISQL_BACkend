@@ -195,7 +195,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-DATABASE_URL = os.getenv("DATABASE_URL")
+DATABASE_URL = "postgresql+psycopg2://postgres_database_ob0v_user:fRzeyBsJKLTY8YPOc1Uvh3uLrV5Ed4Ai@dpg-d1d6i1adbo4c73cfniag-a.oregon-postgres.render.com/postgres_database_ob0v"
+
 
 def get_db_connection():
     try:
