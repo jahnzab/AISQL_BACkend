@@ -194,7 +194,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-DATABASE_URL = os.getenv("DATABASE_URL")
+DATABASE_URL = os.getenv("")
 
 
 
