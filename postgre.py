@@ -128,7 +128,7 @@
 #                     clean_sql = extract_sql(generated_sql)
 #                     try:
 #                         with db._engine.connect() as conn:
-#                             result = conn.execute(text(clean_sql))
+#                             result = conn.execute(text(cleapostgresql+psycopg2://postgres_database_ob0v_user:fRzeyBsJKLTY8YPOc1Uvh3uLrV5Ed4Ai@dpg-d1d6i1adbo4c73cfniag-a.oregon-postgres.render.com:5432/postgres_database_ob0vn_sql))
 #                             column_names = result.keys()
 #                             formatted_data = [dict(zip(column_names, row)) for row in result.fetchall()]
 #                             if formatted_data:
@@ -194,7 +194,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-DATABASE_URL = os.getenv("")
+DATABASE_URL = os.getenv("postgresql+psycopg2://postgres_database_ob0v_user:fRzeyBsJKLTY8YPOc1Uvh3uLrV5Ed4Ai@dpg-d1d6i1adbo4c73cfniag-a.oregon-postgres.render.com:5432/postgres_database_ob0v")
 
 
 
